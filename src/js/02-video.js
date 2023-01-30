@@ -18,6 +18,8 @@ function saveVideoDate(e) {
 
 window.addEventListener('DOMContentLoaded', loadVideoDate);
 
-function loadVideoDate() {
-  player.setCurrentTime(load(KEY_DATA).time);
+function loadVideoDate(e) {
+  if (load(KEY_DATA) === undefined) {
+    return;
+  } else player.setCurrentTime(load(KEY_DATA).time);
 }
