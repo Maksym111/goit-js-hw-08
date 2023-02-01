@@ -10,7 +10,7 @@ function save(key, value) {
 function load(key) {
   try {
     const dataParsed = localStorage.getItem(key);
-    return dataParsed === null ? undefined : JSON.parse(dataParsed);
+    return dataParsed === null ? '' : JSON.parse(dataParsed);
   } catch (err) {
     console.log(err);
   }
